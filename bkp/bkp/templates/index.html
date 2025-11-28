@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Detector de Fake News</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Detector de Fake News</h1>
+      <p class="subtitle">Cole o título ou conteúdo da notícia e clique em <strong>Analisar</strong>.</p>
+    </header>
+
+    <section class="card">
+      <label class="label" for="inputText">Notícia / Título</label>
+      <textarea id="inputText" placeholder="Cole aqui o texto da notícia..." rows="8"></textarea>
+
+      <div class="controls">
+        <button id="analyzeBtn" class="btn btn-primary">Analisar</button>
+        <button id="clearBtn" class="btn btn-outline">Limpar</button>
+      </div>
+
+      <div id="result" class="result hidden" aria-live="polite">
+        <div class="badge" id="resultBadge">—</div>
+        <div class="meta">
+          <p class="label" id="resultLabel">Resultado</p>
+          <p class="sub" id="resultConf">Confiança: —</p>
+        </div>
+      </div>
+
+      <details class="tips">
+        <summary>Dicas</summary>
+        <ul>
+          <li>Para melhores resultados, cole o texto inteiro da notícia (título + primeiro parágrafo).</li>
+          <li>Se o modelo não estiver treinado, rode <code>python treinar_modelo.py</code> antes de iniciar o servidor.</li>
+        </ul>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <p>"barbudo"</p>
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+

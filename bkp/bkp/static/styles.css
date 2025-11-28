@@ -1,0 +1,39 @@
+:root{
+  --black:#0b0b0b;
+  --yellow:#ffd400;
+  --muted:#f6f6f6;
+  --card-bg:#ffffff;
+  --radius:12px;
+  --focus: 3px solid rgba(255,212,0,0.18);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: linear-gradient(180deg,#fff,var(--muted));
+  color:var(--black);
+}
+.container{max-width:900px;margin:32px auto;padding:24px}
+.header{text-align:center;margin-bottom:8px}
+h1{margin:0;font-size:28px;color:var(--black)}
+.subtitle{color:#333}
+.card{background:var(--card-bg);padding:18px;border-radius:var(--radius);box-shadow:0 6px 24px rgba(11,11,11,0.08);border-left:6px solid var(--yellow)}
+.label{display:block;font-weight:700;margin-bottom:8px;color:#111}
+textarea{width:100%;min-height:140px;resize:vertical;padding:12px 14px;font-size:15px;border-radius:10px;border:2px solid rgba(11,11,11,0.08);outline:none}
+textarea:focus{border-color:#e6c000;box-shadow:var(--focus)}
+.controls{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:800}
+.btn-primary{background:var(--black);color:var(--yellow);border:2px solid var(--black)}
+.btn-outline{background:transparent;color:var(--black);border:2px solid var(--black)}
+.result{display:flex;gap:16px;align-items:center;margin-top:18px;padding:12px;border-radius:12px;border:1px solid rgba(11,11,11,0.04);background:linear-gradient(180deg,rgba(255,255,255,0.7),rgba(250,250,250,0.9))}
+.badge{min-width:86px;min-height:86px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;box-shadow:0 8px 24px rgba(11,11,11,0.08);border:4px solid var(--black)}
+.badge.fake{background:#e53935;color:#fff;border-color:var(--black)}
+.badge.real{background:var(--yellow);color:var(--black);border-color:var(--black)}
+.meta{display:flex;flex-direction:column}
+.meta .label{font-weight:700;margin:0 0 6px 0}
+.meta .sub{margin:0;color:#222;font-size:14px}
+.hidden{display:none}
+.footer{margin-top:18px;text-align:center;color:#444;font-size:13px}
+.tips{margin-top:14px;padding:10px 12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,244,204,0.6),rgba(255,250,230,0.4));border:1px solid rgba(0,0,0,0.04);color:#111}
+@media (min-width:880px){.container{padding:34px}.card{padding:26px}}
