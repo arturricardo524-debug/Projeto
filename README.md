@@ -6,4 +6,4 @@ Nos links acima você poderá acompanhar o código do projeto, que consiste em u
 - Davi Mendes Alcântara
 - Teverson Ramon Passos de Jesus
 - Artur Ricardo Pires
-Alan Iuri
+- Alan Iuri
